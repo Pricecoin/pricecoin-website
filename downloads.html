@@ -1,0 +1,58 @@
+<HTML>
+    <head>
+        <title>Pricecoin | Download</title>
+        <link rel='icon' href='favicon.ico' type='image/x-icon'/>
+        <link rel="stylesheet" type="text/css" href="style-v2.css"/>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script src="page-scale.js"></script>
+    </head>
+    <body id="bd" onload="load()">
+        <div class="header" id="header" onclick="logo()">
+            <img id="logo" src="pricecoinHead.jpg" height="64px">
+            <ul id="menu">
+                <li id="about"><a href="index.html">About</a></li>
+                <li id="wallet"><a id="active" href="#">Wallet</a></li>
+                <li id="wallet"><a href="http://bitforcecrypto.com">Block Explorer</a></li>
+                <li id="discord"><a href="https://discord.gg/TcWxhAQ">Discord</a></li>
+            </ul>
+        </div>
+        <div class="spacer" id="sp"></div>
+        <!--<a href="https://twitter.com/PricecoinCrypto/status/1204895345555066887?s=20" style="margin:0px;border:0px;background:none;padding:none;"><img src="airDrop.jpg" class="promo-splash"></a>-->
+        <h1>Download the PricecoinX Wallet</h1>
+        <div class="download" style="background-image:url('apple-icon.png');">
+        <a href="downloads/PricecoinX-Core.dmg">Mac Wallet</a>
+        <p>Supports Mac OS X El Capitan and Above</p>
+        </div>
+        <!--<br />-->
+        <div class="download" style="background-image:url('windows-icon.png');">
+        <a href="downloads/pricecoinx-0.17.1-win64-setup.exe">Windows Wallet</a>
+        <p>Supports Windows 7 and Above</p>
+        </div>
+        <!--<br />-->
+        <div class="download" style="background-image:url('tux-icon.png');">
+        <a href="downloads/pricecoinx-qt">Linux Wallet</a>
+        <p>Supports recent Debian and Ubuntu distros. While the wallet does work with other distros, our builds target Debian and Ubuntu.</p>
+        </div>
+        <br />
+        <h2>Troubleshooting:</h2>
+        <p>If your node fails to connect to any nodes on start, please go to <u>Help &#8227; Debug &#8227; Window &#8227; Console</u> and enter the following commands:</p>
+        <ul style="font-family:'Lucida Console', Monaco, monospace;">
+            <li>addnode 51.158.121.4 add</li>
+            <li>addnode 51.15.215.166 add</li>
+            <li>addnode 107.112.216.59 add</li>
+            <li>addnode 79.177.26.188 add</li>
+        </ul>
+        <p>If it&apos;s still not working, try these ones too:</p>
+        <ul style="font-family:'Lucida Console', Monaco, monospace;">
+            <li>addnode 216.106.156.204 add</li>
+            <li>addnode 95.179.47.203 add</li>
+            <li>addnode 2.133.0.154 add</li>
+            <li>addnode 91.105.181.86 add</li>
+            <li>addnode 217.182.166.152 add</li>
+            <li>addnode 217.182.166.152 add</li>
+            <li>addnode 104.37.175.112 add</li>
+        </ul>
+        <p>If you&apos;re still having trouble, please contact us on <a href="https://discord.gg/TcWxhAQ">Discord</a>.</p>
+        <p id="foot">&copy; PricecoinX Core Developers 2018 - 2019. Created by Zach Price. Website by <a href="http://andrewhill.me">Andrew Hill</a>.</p>
+    </body>
+</HTML>

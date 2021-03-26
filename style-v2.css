@@ -1,0 +1,185 @@
+            @import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
+            body { 
+                max-width: 1000;
+                width: 80vw;
+                min-width: 40vw;
+                padding: 64px;
+                margin: auto;
+                margin-top: none;
+                font-family: 'Alata', sans-serif;
+                background-color: #fff;
+                min-height: 110vh;
+            }
+            div.download {
+                margin-top: 32px;
+                padding: 32px 32px 32px 32px;
+                border-radius: 0px;
+                box-shadow: #ccc 1px 1px 16px;
+                margin-bottom: 16px;
+                background-size: contain;
+                background-position: right;
+                background-repeat: no-repeat;
+            }
+            .download > a {
+                border-bottom: solid 3px #457;
+                color: #457;
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 24px;
+            }
+            .download > a:hover {
+                border-bottom: solid 3px #abc;
+                color: #abc;
+            }
+            .download > p {
+                font-size: 18px;
+            }
+            img.promo-splash {
+                width: 100%;
+                max-width: 1000px;
+                border-radius: 12px;
+                box-shadow: #ddd 1px 1px 22px;
+                margin-bottom: 36px;
+            }
+            div.splash {
+                margin-top: 12px;
+                padding: 12px 32px 24px 32px;
+                border-radius: 0px;
+                box-shadow: #888 1px 1px 22px;
+                margin-bottom: 42px;
+                transition: 0.08s ease-out;
+                text-align: left;
+            }
+            .splash > h1 {
+                font-size: 36px;
+                color: #444;
+            }
+            .splash > p {
+                font-size: 22px;
+                color: #444;
+                margin-bottom: 48px;
+            }
+            .splash > a {
+                padding: 8px 24px 10px 24px;
+                border-radius: 32px;
+                background-color: #457;
+                background: linear-gradient(90deg, rgba(80,235,250,1) 0%, rgba(110,245,141,1) 100%);
+                color: #334;
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 24px;
+                transition: 0.08s ease-out;
+                box-shadow: #bbb 1px 2px 4px;
+                position: relative;
+                top: 0px;
+                border: solid rgba(155,250,255,0.5) 2px;
+                
+            }
+            .splash > a:hover {
+                background-color: #abc;
+                box-shadow: #999 1px 8px 8px;
+                top: -6px;
+            }
+            .splash > a:active {
+                background-color: #abc;
+                background: linear-gradient(90deg, rgba(150,255,255,1) 0%, rgba(150,255,161,1) 100%);
+                box-shadow: rgba(150,255,255,1) 1px 1px 8px;
+                top: 0px;
+                transition: 0s;
+            }
+            div.header {
+                top: 0px;
+                left: 0px;
+                position: fixed;
+                padding-left: 5vw;
+                padding-right: 5vw;
+                width: 90vw;
+                min-height: 64px;
+                max-height: 128px;
+                background-color: #111319;
+                text-align: left;
+                color: #eeeeee;  
+            }
+            .headerlimbo {
+                background-image: url('pricecoinHead.jpg');
+                background-position: 5vw, 0vw;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            div.sub-header {
+                top: 64px;
+                left: 0px;
+                position: fixed;
+                width: 96vw;
+                padding-left: 2vw;
+                padding-right: 2vw;
+                height: 48px;
+                background-color: #222222;
+                text-align: left;
+                color: #f2f2f2;
+            }
+            img {
+                display: inline-block;
+                cursor: pointer;
+            }
+            div > ul {
+                display: inline-block;
+                position: absolute;
+                top: 0px;
+                right: 5vw;
+                font-size: 20px;
+                margin-top: 16px;
+                padding: 0px;
+            }
+            div > ul > li {
+                font-family: 'Alata', sans-serif;
+                display: inline;
+                margin-left: 12px;
+                margin-right: 12px;
+                text-decoration: none;
+                
+            }
+            li > a {
+                border-bottom: solid 0px #fff;
+                color: #fff;
+                text-decoration: none;
+            }
+            li > a:hover {
+                transition: 0.1s;
+                border-bottom: solid 3px #fff;
+                cursor: pointer;
+            }
+            #active {
+                border-bottom: solid 3px #fff;
+                cursor: pointer;
+            }
+            body > a {
+                border-bottom: solid 3px #457;
+                color: #457;
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 24px;
+            }
+            body > a:hover {
+                border-bottom: solid 3px #abc;
+                color: #abc;
+            }
+            .spacer {
+                height: 48px;
+            }
+            body > p {
+                font-size: 18px;
+            }
+            body > ul > li {
+                font-size: 18px;
+                margin-top: 4px;
+                margin-bottom: 4px;
+            }
+            #foot {
+                color: #6f6f6f;
+                font-size: 18px;
+                text-align: left;
+                margin-top: 64px;
+                position: relative;
+                bottom: 0px;
+            }
