@@ -1,4 +1,9 @@
-            @import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
+            @import url('https://static.timebound.org/css/circular.min.css');
+
+            * {
+                font-weight: 100;
+            }
+
             body { 
                 max-width: 1000;
                 width: 80vw;
@@ -6,7 +11,7 @@
                 padding: 64px;
                 margin: auto;
                 margin-top: none;
-                font-family: 'Alata', sans-serif;
+                font-family: 'CircularStd', sans-serif;
                 background-color: #fff;
                 min-height: 110vh;
             }
@@ -132,7 +137,7 @@
                 padding: 0px;
             }
             div > ul > li {
-                font-family: 'Alata', sans-serif;
+                font-family: 'CircularStd', sans-serif;
                 display: inline;
                 margin-left: 12px;
                 margin-right: 12px;
