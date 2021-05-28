@@ -157,7 +157,6 @@
 <p><strong id="rewardEpoch">0</strong> pricecoin per epoch</p>
 <p><strong id="rewardMonth">0</strong> pricecoin per 30 days</p>
 <p><strong id="rewardYear">0</strong> pricecoin per year</p>
-<p><strong id="PM">0</strong> PricecoinX Bonus - Year</p>
 </div>
 </section>
 <section class="disclaimer">
@@ -191,17 +190,13 @@ function calcUpdate() {
 
         // Update reward calculations
         document.getElementById("rewardEpoch").innerHTML =
-            ((((stakeAmount.value * ( interestSlider.value * 0.01 ) ) / 73 ) * priceSlider.value ) / 0.08 ).toLocaleString("en-US");
+            (((((stakeAmount.value * ( interestSlider.value * 0.01 ) ) / 73 ) * priceSlider.value ) / 0.08 ) + ((pricecoinxAmount.value * .0012) / 73)).toLocaleString("en-US");
 
         document.getElementById("rewardMonth").innerHTML =
-            (((((stakeAmount.value * ( interestSlider.value * 0.01 ) ) / 73 ) * priceSlider.value ) / 0.08 ) * 6 ).toLocaleString("en-US");
+            ((((((stakeAmount.value * ( interestSlider.value * 0.01 ) ) / 73 ) * priceSlider.value ) / 0.08 ) * 6 ) + (((pricecoinxAmount.value * .0012) / 73) * 6)).toLocaleString("en-US");
 
         document.getElementById("rewardYear").innerHTML =
-            (((stakeAmount.value  * ( interestSlider.value * 0.01 ) ) * priceSlider.value ) / 0.08 ).toLocaleString("en-US");
-            
-        document.getElementById("PM").innerHTML =
-            (pricecoinxAmount.value * .0012).toLocaleString("en-US");
-    
+            ((((stakeAmount.value  * ( interestSlider.value * 0.01 ) ) * priceSlider.value ) / 0.08 ) + (pricecoinxAmount.value * .0012)).toLocaleString("en-US");
     }
 
     // Initiate
