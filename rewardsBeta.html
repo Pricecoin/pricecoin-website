@@ -181,6 +181,7 @@
     var priceSlider = document.getElementById("price");
     var pricecoinxAmount = document.getElementById("pricecoinx");
     var interestSlider = document.getElementById("interest");
+    var pricecoinxMult = (pricecoinxAmount.value / 10000);
 
     function calcUpdate() {
         // Update slider values
@@ -189,13 +190,13 @@
 
         // Update reward calculations
         document.getElementById("rewardEpoch").innerHTML =
-            ((((stakeAmount.value + ((pricecoinxAmount) / 10000) * ( interestSlider.value * 0.01 ) ) / 73 ) * priceSlider.value ) / 0.08 ).toLocaleString("en-US");
+            ((((stakeAmount.value + (pricecoinxMult.value) * ( interestSlider.value * 0.01 ) ) / 73 ) * priceSlider.value ) / 0.08 ).toLocaleString("en-US");
 
         document.getElementById("rewardMonth").innerHTML =
-            (((((stakeAmount.value + ((pricecoinxAmount) / 10000) * ( interestSlider.value * 0.01 ) ) / 73 ) * priceSlider.value ) / 0.08 ) * 6 ).toLocaleString("en-US");
+            (((((stakeAmount.value + (pricecoinxMult.value) * ( interestSlider.value * 0.01 ) ) / 73 ) * priceSlider.value ) / 0.08 ) * 6 ).toLocaleString("en-US");
 
         document.getElementById("rewardYear").innerHTML =
-            ((((stakeAmount.value + ((pricecoinxAmount) / 10000) * ( interestSlider.value * 0.01 ) ) * priceSlider.value ) / 0.08 ).toLocaleString("en-US");
+            ((((stakeAmount.value + (pricecoinxMult.value) * ( interestSlider.value * 0.01 ) ) * priceSlider.value ) / 0.08 ).toLocaleString("en-US");
     }
 
     // Initiate
