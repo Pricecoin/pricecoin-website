@@ -141,6 +141,10 @@
 <input id="stake" type="number" placeholder="₳ ADA you will stake">
 </div>
 <div class="field">
+<label for="pricecoinx">Amount of PricecoinX held</label>
+<input id="pricecoinx" type="number" placeholder="PricecoinX Amount">
+</div>
+<div class="field">
 <label for="price">₳ ADA price in $ USD</label>
 <input id="price" type="number" value="2">
 </div>
@@ -175,6 +179,7 @@
 
     var stakeAmount = document.getElementById("stake");
     var priceSlider = document.getElementById("price");
+    var pricecoinxAmount = document.getElementByID("pricecoinx");
     var interestSlider = document.getElementById("interest");
 
     function calcUpdate() {
