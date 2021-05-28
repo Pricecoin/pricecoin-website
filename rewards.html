@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pricecoin Rewards Calculator</title>
+<title>Pricecoin(BETA) Rewards Calculator</title>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap" rel="stylesheet">
 <style>
@@ -142,7 +142,7 @@
 </div>
 <div class="field">
 <label for="pricecoinx">Amount of PricecoinX held</label>
-<input id="pricecoinx" type="number" placeholder="PricecoinX Amount" step="1000">
+<input id="pricecoinx" type="number" placeholder="PRCX Amount" step="1000">
 </div>
 <div class="field">
 <label for="price">₳ ADA price in $ USD</label>
@@ -172,7 +172,7 @@
 <h3>Is this financial advice?</h3>
 <p><strong>NO!</strong> Nothing is guaranteed. This is a pricecoin calculator, not a USD calculator. Please do your own reasearch before making any investment decisions.</p>
 </div>
-<p class="donate"><input readonly type="text" value="addr1q8cgq42y9vn00ywmxphupevkfvtvuega4v9c4kxs02synd0s2a5gedq76sp0sp7vz6q92rs97u7s3uv7l4ax2ndhyg2s26vtyp"></p>
+<p class="donate"><input readonly type="text" value="addr1q8xt6m3mty4752y8gha8a993wan28w57yj0xvg8h5lp3s5uwy5hpyj4hpx7hvp8d60fj5szpanadt4g2eqftme8c9hgsnmacn3"></p>
 </section>
 <script type="text/javascript">(function(){window['__CF$cv$params']={r:'656329985ee90ba7',m:'522ef9f9ffe32be55a3806bc294a7ac73655a198-1622159604-1800-AVdrh+qAkLTpmSr1T5kiqnh0aHAOXqU7cMXgTQQonppKQJvw1F2RBFzBBYz7iWMrHtFNv2UQ+uO1T0hSs4MCiF6Ls0jz9OmYgJaxGb/AO39B/MqKEjAR24ALhIGLiT3iQw==',s:[0xdb2cda65ff,0x44624f916c],}})();</script></body>
 <script>
@@ -182,20 +182,21 @@
     var pricecoinxAmount = document.getElementById("pricecoinx");
     var interestSlider = document.getElementById("interest");
 
-    function calcUpdate() {
+
+function calcUpdate() {
         // Update slider values
         console.log(stakeAmount + priceSlider + interestSlider);
         document.getElementById("interestDisplay").innerHTML = interestSlider.value + "%";
 
         // Update reward calculations
         document.getElementById("rewardEpoch").innerHTML =
-            ((((stakeAmount.value * ( interestSlider.value * 0.01 ) ) / 73 ) * priceSlider.value ) / 0.08 ).toLocaleString("en-US");
+            (((((stakeAmount.value * ( interestSlider.value * 0.01 ) ) / 73 ) * priceSlider.value ) / 0.08 ) + ((pricecoinxAmount.value * .0012) / 73)).toLocaleString("en-US");
 
         document.getElementById("rewardMonth").innerHTML =
-            (((((stakeAmount.value * ( interestSlider.value * 0.01 ) ) / 73 ) * priceSlider.value ) / 0.08 ) * 6 ).toLocaleString("en-US");
+            ((((((stakeAmount.value * ( interestSlider.value * 0.01 ) ) / 73 ) * priceSlider.value ) / 0.08 ) * 6 ) + (((pricecoinxAmount.value * .0012) / 73) * 6)).toLocaleString("en-US");
 
         document.getElementById("rewardYear").innerHTML =
-            (((stakeAmount.value * ( interestSlider.value * 0.01 ) ) * priceSlider.value ) / 0.08 ) + (pricecoinxAmount/10000).toLocaleString("en-US");
+            ((((stakeAmount.value  * ( interestSlider.value * 0.01 ) ) * priceSlider.value ) / 0.08 ) + (pricecoinxAmount.value * .0012)).toLocaleString("en-US");
     }
 
     // Initiate
@@ -206,6 +207,7 @@
     priceSlider.oninput = function() { calcUpdate(); }
     stakeAmount.oninput = function() { calcUpdate(); }
     pricecoinxAmount.oninput = function() { calcUpdate(); }
+
 
 </script>
 </html>
