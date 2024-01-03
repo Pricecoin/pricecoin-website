@@ -51,18 +51,11 @@
     <p><b>Note:</b> The address format is different due to the pool running older versions. Our current pool (pool4u) does not support new addresses, so use a legacy address for now.</p>
 
     <p>Generating a legacy address:</p>
-
-    <ul style="font-family:'Lucida Console', Monaco, monospace;">
-        <li>Navigate to your PricecoinX folder (C:\Users\<username>\AppData\Roaming\PricecoinX in Windows).</li>
-        <li>Create a pricecoinx.conf file if not already present.</li>
-        <li>Add the following to your conf file:</li>
-    </ul>
+    <p>please navigate to <u>Window &#8227; Console</u> and enter the following command:</p>
 
     ```
-    addresstype=legacy
+    getnewaddress "LabelName" legacy
     ```
-
-    <p>Restart your node, go to Window > Console, and type `getnewaddress`. This will give you a fresh legacy address to use in your miner configuration file.</p>
 
     <p>This ensures you are mining PricecoinX properly. The need for a legacy address may change soon, and we'll update this website accordingly.</p>
 
