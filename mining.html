@@ -1,7 +1,8 @@
 <html>
 
 <head>
-    <title>Pricecoin | Download</title>
+    <title>Pricecoin | Mining
+    </title>
     <link rel='icon' href='favicon.ico' type='image/x-icon' />
     <link rel="stylesheet" type="text/css" href="style-v2.css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
@@ -38,14 +39,34 @@
         <p>Supports AMD Cards</p>
     </div>
     <br />
-    <h2>Troubleshooting PricecoinX:</h2>
-    <p>If your node fails to connect to any nodes on start, please go to <u>Window &#8227; Console</u> and enter the following commands:</p>
+    <h2>Mining PricecoinX:</h2>
+    <p>Mining PricecoinX is pretty straightforward. If you are currently mining other GPU coins or have mined GPU coins in the past, this process should be familiar. The majority of the configuration needed is up to the mining software you are using.</p>
+
+    <p>For example, if you mine on a Nvidia card with CCMiner, your run.bat file might look like this:</p>
+
+    ```bash
+    ccsolominer.exe -a allium -o stratum+tcp://stratum.pool4u.net:8181 -u PLmcD86KKFTKyoMfDm5w1hsgKn7km8Cj1p -p c=PRCX
+    ```
+
+    <p>Note that the address format is different due to the pool running older versions. Our current pool(pool4u) does not support new addresses, so use a legacy address for now.</p>
+
+    <p>Generating a legacy address:</p>
+
     <ul style="font-family:'Lucida Console', Monaco, monospace;">
-        <li>addnode 51.159.160.29 add</li>
-        <li>addnode 144.91.115.96 add</li>
-        <li>addnode 75.250.247.210 add</li>
+        <li>Navigate to your PricecoinX folder (C:\Users\<username>\AppData\Roaming\PricecoinX in Windows).</li>
+        <li>Create a pricecoinx.conf file if not already present.</li>
+        <li>Add the following to your conf file:</li>
     </ul>
-    <p>If you&apos;re still having trouble, please contact us on <a href="https://discord.gg/TcWxhAQ">Discord</a>.</p>
+
+    ```bash
+    addresstype=legacy
+    ```
+
+    <p>Restart your node, go to Window > Console, and type `getnewaddress`. This will give you a fresh legacy address to use in your miner configuration file.</p>
+
+    <p>This ensures you are mining PricecoinX properly. The need for a legacy address may change soon, and we'll update this website accordingly.</p>
+
+    <p>If you encounter any issues, please contact us on <a href="https://discord.gg/TcWxhAQ">Discord</a>.</p>
     <p id="foot">&copy; PricecoinX Core Developers 2018 - 2024. Created by Zach Price. Website by <a
             href="http://andrewhill.me">Andrew Hill</a>.</p>
 </body>
